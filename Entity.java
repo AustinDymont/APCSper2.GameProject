@@ -14,7 +14,8 @@ public class Entity extends NamedThing
     private int intelligence ;
     private int wisdom;
     private int charisma;
-    private double mapPosition;
+    private int mapRow;
+    private int mapColumn;
 
     /**
      * Constructor for all manual inputs of variables of an object Entity 
@@ -28,9 +29,10 @@ public class Entity extends NamedThing
      * @param int in is the intelligence
      * @param int wi is the wisdom
      * @param int ch is charisma
-     * @param int mp is their position on the map
+     * @param int mr is their position on the map, row
+     * @param int mc is their position on the map, column
      */
-    public Entity(String n, String d, int h, int a, Weapon w, int st, int de, int co, int in, int wi, int ca, double mp)
+    public Entity(String n, String d, int h, int a, Weapon w, int st, int de, int co, int in, int wi, int ca, int mr, int mc)
     {
         super(n,d);
         health = h; 
@@ -42,7 +44,8 @@ public class Entity extends NamedThing
         intelligence = in; 
         wisdom = wi; 
         charisma = ca; 
-        mapPosition = mp;
+        mapRow = mr;
+        mapColumn = mc;
     }
 
     /**
@@ -58,7 +61,7 @@ public class Entity extends NamedThing
      * @param int ch is charisma
      * @param double mp is their position on the map
      */
-    public Entity(String n, String d, int h, int a, int st, int de, int co, int in, int wi, int ca, double mp)
+    public Entity(String n, String d, int h, int a, int st, int de, int co, int in, int wi, int ca, int mr, int mc)
     {
         super(n,d);
         health = h; 
@@ -70,7 +73,8 @@ public class Entity extends NamedThing
         intelligence = in; 
         wisdom = wi; 
         charisma = ca; 
-        mapPosition = mp;
+        mapRow = mr;
+        mapColumn = mc;
 
     }
 
@@ -80,7 +84,7 @@ public class Entity extends NamedThing
      * @param String d is the discription
      * @param double mp is the map position 
      */
-    public Entity(String n, String d, double mp)
+    public Entity(String n, String d, int mr, int mc)
     {
         super(n,d);
         health = 10; 
@@ -92,10 +96,10 @@ public class Entity extends NamedThing
         intelligence = 10; 
         wisdom = 10; 
         charisma = 10; 
-        mapPosition = mp;
+        mapRow = mr;
+        mapColumn = mc;
 
     }
-
     /**
      * Method to get the health
      * @return health variable 
@@ -241,21 +245,39 @@ public class Entity extends NamedThing
     }
 
     /**
-     * Method to get the map position variable 
-     * @return Map Position variable
+     * Method to get the map row variable 
+     * @return Map Row variable
      */
-    public double getMapPosition()
+    public int getMapRow()
     {
-        return mapPosition;
+        return mapRow;
     }
 
     /**
-     * Method to set the Map poisiton
-     * @param int st is the new Map position
+     * Method to set the Map Row
+     * @param int mr is the new Map position
      */
-    public void setMapPosition(int mp)
+    public void setMapRow(int mr)
     {
-        mapPosition = mp;
+        mapRow = mr;
+    }
+
+    /**
+     * Method to get the map column position
+     *@param int mc is the new Map position
+     */
+    public int getMapColumn()
+    {
+        return mapColumn;
+    }
+
+    /**
+     *Method to set the map column position
+     *@param int mc is the new Map comunm
+     **/
+    public void setRowColumn(int mc)
+    {
+        mapColumn = mc;
     }
 
     /**

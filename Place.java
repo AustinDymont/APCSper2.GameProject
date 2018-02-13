@@ -23,5 +23,5 @@ public class Place extends NamedThing
     public void addItem(Item i)
     {
         stuff.add(i);
-    }
+    }  
 }

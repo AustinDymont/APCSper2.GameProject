@@ -8,7 +8,7 @@
 public abstract class NamedThing
 {
     private String name; 
-    private String discription; 
+    private String description; 
     /**
      * Constructor for objects of class NamedThing
      * 
@@ -17,7 +17,7 @@ public abstract class NamedThing
     public NamedThing(String n , String d)
     {
         name = n; 
-        discription = d; 
+        description = d; 
     }
 
     /**
@@ -37,6 +37,6 @@ public abstract class NamedThing
      */
     public String toString()
     {
-        return discription;
+        return name + " " + description;
     }
 }
